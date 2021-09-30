@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+    <c:recipe xmlns:c='http://www.my-site.com/cooking'>
+        <c:title>Grilled Cheese Sandwich</c:title>
+        <c:ingredients>
+            <c:ingredient qty='2'>bread slice</c:ingredient>
+            <c:ingredient>cheese slice</c:ingredient>
+            <c:ingredient qty='2'>margarine pat</c:ingredient>
+            <c:ingredient></c:ingredient>
+        </c:ingredients>
+    </c:recipe>
+    <recipe>
+        <title>Kombucha Skin Cream</title>
+        <ingredients>
+            <ingredient qty='2'>bread slice</ingredient>
+            <ingredient qty='100ml'>olive oil</ingredient>
+            <ingredient qty='2'>margarine pat</ingredient>
+            <ingredient></ingredient>
+        </ingredients>
+    </recipe>
+</root>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="css/utilities.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">   
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">   
+    <link type="text/css" rel="stylesheet" href="css/bootstrap-utilities.min.css">   
+    <title>Notebook Web Site - Cloud Hosting For Everyone</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex">
+            <h1>Galon</h1>
+            <div class="burger-nav">
+                <ul class="nav-list-wrapper">
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">JavaScript-MilanTair
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="javascript-milan-tair.html">Link 1 on</a>
+                            <a href="javascript-milan-tair2.html">Link 2 on</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <li><a href="js-form-validation.html">JS Form Validation</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Form -->
+    <main>
+        <form name="firstForm" class="flex-fill bg-warning p-5">
+            <fieldset>
+            <!-- Full Name -->
+            <div class="flex justify-content-center p-2">
+                <label for="inputFullName" class="col-sm-1 col-form-label">Full Name:</label>
+                <div class="col-sm-3">
+                    <input onblur="validateInput('inputFullName');" type="text" class="form-control" id="inputFullName" placeholder="Full Name">
+                </div>
+            </div>
+            <!-- Username -->
+            <div class="flex justify-content-center p-2">
+                <label for="inputUsername" class="col-sm-1 col-form-label">Username:</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="inputUsername" placeholder="User_name">
+                </div>
+            </div>
+            <!-- Email -->
+            <div class="flex justify-content-center p-2">
+                <label for="inputEmail" class="col-sm-1 col-form-label">Email:</label>
+                <div class="col-sm-3">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <!-- Password -->
+            <div class="flex justify-content-center p-2">
+                <label for="inputPassword" class="col-sm-1 col-form-label">Password:</label>
+                <div class="col-sm-3">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <!-- Confirm Password -->
+            <div class="flex justify-content-center p-2">
+                <label for="inputConfirmPassword" class="col-sm-1 col-form-label">Confirm Password:</label>
+                <div class="col-sm-3">
+                    <input type="password" class="form-control" id="inputConfirmPassword" placeholder="Confirm Password">
+                </div>
+            </div>
+            <!-- Mobile Number -->
+            <div class="flex justify-content-center p-2">
+                <label for="inputMobileNumber" class="col-sm-1 col-form-label">Mobile Number:</label>
+                <div class="col-sm-3">
+                    <input type="tel" class="form-control" id="inputMobileNumber" placeholder="Mobile Number">
+                </div>
+            </div>
+            <!-- Education Level -->
+            <div class="flex justify-content-center p-2">
+                <label for="lvl" class="col-sm-1 col-form-label">Education Level:</label>
+                <div class="col-sm-3">
+                    <select class="form-select" name="edulvl" id="lvl">
+                        <option value="3">III. level</option>
+                        <option value="4">IV. level</option>
+                        <option value="7">VII. level</option>
+                        <option value="8">VIII. level</option>
+                        <option value="dr">Doktor </option>
+                    </select>
+                </div>
+            </div>
+            <!-- Radios -->
+            <fieldset class="flex justify-content-center p-2">
+                    <legend class="col-form-label col-sm-1">Radios:</legend>
+                    <div class="radios flex col-sm-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radios" id="radios1" value="option1">
+                            <label class="form-check-label" for="radios1">
+                                First
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radios" id="radios2" value="option2">
+                            <label class="form-check-label" for="radios2">
+                                Second
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radios" id="radios3" value="option3">
+                            <label class="form-check-label" for="radios3">
+                                Third
+                            </label>
+                        </div>
+                    </div>
+            </fieldset>
+            <!-- Checkbox -->
+            <fieldset class="flex justify-content-center p-2">
+                <legend class="col-form-label col-sm-1">Checkbox:</legend>
+                <div class="checkbox flex col-sm-3">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check1">
+                        <label class="form-check-label" for="check1">
+                            First
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check2">
+                        <label class="form-check-label" for="check2">
+                            Second
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="check3">
+                        <label class="form-check-label" for="check3">
+                            Third
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <!-- Msg -->
+            <div class="msg p-2"></div>
+            <!-- Submit Button -->
+            <div class="flex justify-content-center p-2">
+                <!-- <input class="btn btn-primary" type="submit" id="btnid" value="Sign In"> -->
+                <button class="btn btn-primary col-sm-2" type="submit" id="btnid">Sign Up</button>
+            </div>
+            </fieldset>
+        </form>
+    </main>
+    <!-- Footer -->
+    <footer class="footer bgDark py5">
+        <div class="container flex">
+                <div>
+                    <h1>Galon-JS</h1>
+                    <p>Copyright &copy; 2021</p>
+                </div>
+                <div class="burger-nav">
+                    <ul class="nav-list-wrapper">
+                        <li><a href="index.html" class="current">Home</a></li>
+                        <li><a href="features.html">Features</a></li>
+                        <li><a href="docs.html">Docs</a></li>
+                        <li><a href="calculator.html">Calculator</a></li>
+                        <div class="dropdown">
+                            <button class="dropbtn">JavaScript-MilanTair
+                                <i class="fa fa-caret-down"></i>
+                            </button>
+                            <div class="dropdown-content">
+                                <a href="javascript-milan-tair.html">Link 1 on</a>
+                                <a href="javascript-milan-tair2.html">Link 2 on</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <li><a href="js-form-validation.html">JS Form Validation</a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>  
+    <script type="text/javascript" src="js/form.js"></script>  
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+</head>
+<body>
+    <h1 class="head">setIntetval()</h1>
+
+    <div class="loader"></div><br>
+    <div class="box"></div><br>
+
+    <button class="myButton">Click me</button>
+
+    <script>
+        let promise = new Promise((resolve, reject) => {
+            setTimeout(() => resolve('Loaded !'), 3000)
+        });
+        promise.then(function (result) {
+            let resultBox = document.querySelector('.box');
+            resultBox.innerHTML = result
+        }).finally(function () {
+            let loader = document.querySelector('.loader');
+            loader.style.display = 'none'
+        })
+        // function delay(time) {
+        //     return new Promise(function (resolve, reject) {
+        //         // setTimeout(resolve, time)
+        //         setTimeout(function () {
+        //             reject(new Error('unknown error.'))
+        //         }, time)
+        //     });            
+        // }
+        // delay(4000).then(function (resolve, reject) {
+        //     console.log('4 sec passed');
+            
+        // })
+        // delay(5000).catch(function (error) {
+        //         console.error(error);
+        // })
+
+        // let promise = new Promise(function (resolve, reject) {
+            
+        //     let result = Math.random() * 10
+
+        //     resolve(result)
+        // })
+        // promise.then(function (result) {
+        //     console.log('Async operation successfully finished. Result is: ' + result);
+        // }, function (error) {
+        //     console.error('Async operation failure. Error is: ' + error);
+        // })
+        // console.log('Haloo World');        
+
+        // function successCallback(result) {
+        //     console.log('Async operation successfully finished. Result is: ' + result);
+        // }
+        // function failureCallback(error) {
+        //     console.error('Async operation failure. Error is: ' + error);
+        // }
+        // doSomethingAsync(successCallback, failureCallback);
+
+        // let promise = doSomethingAsync();
+        // promise.then(successCallback, failureCallback)
+
+        // window.addEventListener('load', function () {
+        //     console.log('Web page has been loaded !!!');
+        //     let head = document.querySelector('.head');
+        //     document.querySelector('.myButton').addEventListener('click', function () {
+        //         console.log('Haloo from statment after alert() method.');
+        //         setInterval(() => {
+        //             head.style.color = head.style.color === 'red' ? 'blue' : 'red'
+        //         }, 500);
+        //     });
+        // });
+    </script>
+</body>
+</html>

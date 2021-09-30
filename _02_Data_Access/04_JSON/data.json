@@ -1,0 +1,95 @@
+{
+    "name": "Main Gallery",
+    "images": [
+        {
+            "id": 1,
+            "width": 800,
+            "height": 400,
+            "title": "View from 15th floor",
+            "thumbnail": {
+                "url": "http://www.example.com/image/image1",
+                "height": 125,
+                "width": 100
+            },
+            "show": true
+        },
+        {
+            "id": 2,
+            "width": 800,
+            "height": 400,
+            "title": "Garden View",
+            "thumbnail": {
+                "url": "http://www.example.com/image/image2",
+                "height": 125,
+                "width": 100
+            },
+            "show": true
+        }
+    ]
+}
+{
+    "menu": {
+        "id": "file",
+        "text": "file",
+        "icon": "file.svg",
+        "popup": {
+            "menuitem": [
+                {
+                    "text": "New",
+                    "onclick": "createNewDoc()"
+                },
+                {
+                    "text": "Open",
+                    "onclick": "openDoc()"
+                },
+                {
+                    "text": "Close",
+                    "onclick": "closeDoc()"
+                }
+            ]
+        }
+    }
+}
+{
+    "countries": [
+        {
+        "countryCode": "sr",
+        "name": "Serbia",
+        "capital": "Belgrade",
+        "description": "Serbia is..."
+    },
+    {
+        "countryCode": "fr",
+        "name": "France",
+        "capital": "Paris",
+        "description": "France is..."
+    }
+    ]
+}
+[
+    {
+        "countryCode": "sr",
+        "name": "Serbia",
+        "capital": "Belgrade",
+        "description": "Serbia is..."
+    },
+    {
+        "countryCode": "fr",
+        "name": "France",
+        "capital": "Paris",
+        "description": "France is..."
+    }
+]
+[3, 4, 5]
+[3, "4", 5]
+{
+    "isValid": true,
+    "value": null,
+    "required": false
+}
+{
+    "isValid": true,
+    "value": "This is quotation mark: \"",
+    "value": "This is backslash: \\",
+    "required": false
+}

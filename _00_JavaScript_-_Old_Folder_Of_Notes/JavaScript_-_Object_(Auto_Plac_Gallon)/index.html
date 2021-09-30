@@ -1,0 +1,117 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Plac GALON 2</title>
+    <link type="text/css" rel="stylesheet" href="main.css">
+    <link type="text/css" rel="stylesheet" href="stickyForm.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <h1>Auto Plac GALON 2</h1>
+
+<main class="autoplac">
+    <section class="tableFixHead">
+        <table>
+            <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>Mileage</th>
+                    <th>Year</th>
+                    <th>Color</th>
+                    <th>Registration</th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="obavestenje"></div>
+       
+    </section>
+    <section class="forma">
+        <form onsubmit="return false;" class="forminline" id="form"> 
+            <section class="form1">
+                <div class="labels">
+                    <div class="label">
+                        <div>
+                            <label for="model">Model:</label>
+                        </div>
+                        <div>
+                            <select name="model" id="model">
+                                <option selected>Select</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="Fiat">Fiat</option>
+                                <option value="Audi">Audi</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Yugo">Yugo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="label mileage">
+                        <div class="m1">
+                            <label for="mileage">Mileage:</label>
+                        </div>
+                        <div class="m2">
+                            <input type="number" 
+                                    id="mileage" 
+                                    name="mileage">
+                        </div>
+                        <div class="m3">
+                            <h4>km</h4>
+                        </div>
+                    </div>
+                    <div class="label">
+                        <div>
+                            <label for="year">Year:</label>
+                        </div>
+                        <div>
+                            <input type="number" 
+                                    id="year" 
+                                    name="year">
+                        </div>
+                    </div>                  
+                    <div class="label">
+                        <div>
+                            <label for="color">Color:</label>
+                        </div>
+                        <div>
+                            <input type="color" 
+                                    value="#111111" 
+                                    id="color" 
+                                    name="color">
+                        </div>
+                    </div>                    
+                    <div class="label">
+                        <div>
+                            <label for="registration">Registration:</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" 
+                                    value="check" 
+                                    id="registration" 
+                                    name="registration">
+                        </div>
+                        <div>
+                            <input type="date" 
+                                    id="registration-date" 
+                                    name="registration-date"
+                                    pattern="\d{4}-\d{2}-\d{2}">
+                        </div>
+                    </div>                    
+                </div>                              
+            </section>
+            <section class="form2">
+                <button class="btn btn-primary btn-save">Save</button>
+                <button class="btn btn-primary btn-reset">Reset</button>
+            </section>
+        </form>
+    </section>
+</main>     
+    <script type="text/javascript" src="main.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

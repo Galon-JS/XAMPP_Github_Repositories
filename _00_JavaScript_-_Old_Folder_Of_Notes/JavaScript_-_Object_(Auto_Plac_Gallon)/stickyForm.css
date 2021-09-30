@@ -1,0 +1,41 @@
+/* Sticky Form */
+.forminline {
+    position: sticky;
+    top: 0;
+    width: 100%;    
+}
+
+/* Borders (if you need them) */
+/* .tableFixHead,
+.tableFixHead td {
+    box-shadow: inset 1px -1px darkblue;
+} */
+
+/* .tableFixHead th {
+    box-shadow: inset 1px 1px darkblue, 0 1px darkblue;
+} */
+
+Hide code snippet .tableFixHead {
+    overflow-y: auto;
+    height: 100px;
+}
+
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+}
+
+/* Just common table stuff. Really. */
+th {
+    background: darkorange;
+}
+
+/* Borders (if you need them) */
+/* .tableFixHead,
+.tableFixHead td {
+    box-shadow: inset 1px -1px darkblue;
+}
+
+.tableFixHead th {
+    box-shadow: inset 1px 1px darkblue, 0 1px darkblue;
+} */

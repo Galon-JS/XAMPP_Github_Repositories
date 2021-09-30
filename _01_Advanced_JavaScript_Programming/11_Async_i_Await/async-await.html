@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        // async function sayHaloo() {
+        //     throw new Error('Error...')
+        //     return 'Haloo World '
+        // }
+        // sayHaloo().catch((err) => {
+        //     console.log(err);
+        // })
+        // sayHaloo().then((result) => {
+        //     console.log(result);
+        // }), (error) => {
+        //     console.log(error);
+        // }
+
+        function getName() {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => resolve('Ana'), 3000)
+                // setTimeout(() => reject('ERROR !!!'), 3001)
+            })
+        }
+        async function sayHaloo(name) {
+            try {
+                name = await getName()                
+            } catch (error) {
+                return error
+            }
+            return 'Haloo World ' + name
+        }
+        // let response = sayHaloo()
+        // console.log('response: ', response);
+        sayHaloo().then((result) => {
+            console.log(result);
+        })
+        // console.log('some other code');
+
+        // async function sayHaloo() {
+        //     return 'Haloo World'
+        // }
+        // let response = sayHaloo()
+        // console.log('response: ', response);
+        // sayHaloo().then((result) => {
+        //     console.log(result);
+        // })
+        // console.log('some other code');
+        
+        // function sayHaloo() {
+        //     return 'Haloo World'
+        // }
+        // let response = sayHaloo()
+        // console.log('response: ', response);
+    </script>
+</body>
+</html>

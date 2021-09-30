@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let xhr = new XMLHttpRequest()
+        xhr.open('GET', 'countries.json')
+        xhr.responseType = 'json'
+        xhr.send()
+
+        xhr.onload = function () {
+
+            let countries = xhr.response
+            console.log('countries: ', countries);
+            console.log('countries: ', countries.length);
+
+            for (let i = 0; i < countries.length; i++) {
+                document.body.innerHTML += `<h3>${countries[i].name}</h3>
+                                            <p>Country Code: ${countries[i].countryCode}</p>
+                                            <p>Capital: ${countries[i].capital}</p>
+                                            <p>Description: ${countries[i].description}</p>`                
+            }
+        }
+        xhr.onerror = function () {
+            console.log('Network Error');
+        }
+        xhr.onprogress = function () {
+            console.log('Received ' + event.loaded + ' of ' + event.total);
+        }
+
+    </script>
+</body>
+</html>

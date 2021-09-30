@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+         function Car(make, model, weight, color) {
+            this.make = make
+            this.model = model
+            this.weight = weight
+            this.color = color     
+            
+            this.startEngine = function () {
+                 return 'Engine of ' + this.make + ' ' + this.model + ' ' + 'started.'
+            }
+        }
+
+        Object()
+        Function()
+        String()
+        console.log(Car.__proto__);
+        console.log(Car.__proto__ === Function.prototype);
+        console.log(Object.__proto__ === Function.prototype);
+        console.log(Function.__proto__ === Function.prototype);
+        
+        console.log(Car.prototype);
+
+        let subaryLegacy = new Car('Subary', 'Legacy', 1560, 'blue')
+        console.log('subaryLegacy: ', subaryLegacy.make);
+        console.log('subaryLegacy: ', subaryLegacy.startEngine());
+        console.log('subaryLegacy: ', subaryLegacy.toString());
+        console.log('subaryLegacy: ', subaryLegacy.__proto__ === Car.prototype);
+        console.log('subaryLegacy: ', Car.prototype.__proto__);
+        console.log('subaryLegacy: ', Car.prototype.__proto__ === Object.prototype);
+        console.log('subaryLegacy: ', Function.prototype.__proto__);
+        console.log('subaryLegacy: ', Function.prototype.__proto__ === Object.prototype);
+        console.log('subaryLegacy: ', Object.prototype.__proto__);
+
+
+    </script>
+</body>
+</html>

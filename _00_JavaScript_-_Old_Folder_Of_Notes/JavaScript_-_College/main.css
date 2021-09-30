@@ -1,0 +1,8 @@
+.stg {
+    min-height: 30vh;
+}
+.tmp {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 3px;
+}

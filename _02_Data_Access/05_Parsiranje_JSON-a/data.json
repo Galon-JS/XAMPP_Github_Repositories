@@ -1,0 +1,26 @@
+{
+    "username": "Ana",
+    "password": "gf54#%^dsds",
+    "dateTimeCreated": "1587290213832"
+},
+{
+    "username": "Vanja",
+    "password": "dr54#%^dsds",
+    "dateTimeCreated": "1382290314831"
+},
+{
+    "title": "Grilled Cheese Sandwich",
+    "ingredients": [
+        {
+            "title": "bread slice",
+            "qty": 2
+        },
+        {
+            "title": "cheese slice",
+            "qty": 1
+        },{
+            "title": "margarine pat",
+            "qty": 1
+        }
+    ],
+}

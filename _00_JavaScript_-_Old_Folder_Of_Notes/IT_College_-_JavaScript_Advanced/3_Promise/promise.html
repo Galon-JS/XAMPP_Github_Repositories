@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            display: none;
+        }
+        .loader:after {
+            content: ' ';
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin: 1px;
+            border-radius: 50%;
+            border: 1px solid #241f1f;
+            border-color: #241f1f transparent #241f1f transparent;
+            animation: dualring 1.2s linear infinite;
+        }
+        @keyframes dualring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(400deg);
+            }
+        }
+        #myTextarea {
+            width: 100%;
+            display: block;
+            margin-top: 16px;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="btn">Get Data</button>
+    <div class="loader"></div>
+    <textarea id="myTextarea" cols="30" rows="10"></textarea>
+    <script>
+     let btnGetData = document.querySelector('.btn')
+     let divLoader = document.querySelector('.loader')
+     let textArea = document.querySelector('#myTextarea')
+    
+     btnGetData.addEventListener('click', function() {
+        getData()
+         divLoader.style.display = 'inline-block'
+        
+        //  fetch('https://raw.githubusercontent.com/v-dresevic/Advanced-JavaScript-Programming/master/data/text.txt').then(function (response) {
+        //     if (response.status !== 200) {
+        //         console.log(response.status)
+        //         throw new Error ('Error loaded file')
+        //     }
+        //     console.log(response.status)
+        //     return response.text()
+        //  }).then(function (text) {
+        //      textArea.innerHTML = text
+        //  }).catch(function (err) {
+        //      textArea.innerHTML = '-----' + err.message
+        //  }).finally(function () {
+        //      divLoader.style.display = 'none'
+        //  })
+     })
+
+     async function getData () {
+        try {
+            let response = await fetch('https://raw.githubusercontent.com/v-dresevic/Advanced-JavaScript-Programming/master/data/text.txt')
+            
+            if (response.status !== 200) {
+                throw new Error ('Error while reading file.')
+            }
+
+            let text = await response.text()
+            textArea.innerHTML = text
+        } catch (err) {
+            textArea.innerHTML = err.message
+        } finally {
+            divLoader.style.display = 'none'
+        }
+        }
+     
+    </script>
+</body>
+</html>

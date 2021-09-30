@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Notebook Web Site - Cloud Hosting For Everyone</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex">
+                <h1>Galon</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">JavaScript-MilanTair
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="javascript-milan-tair.html">Link 1 on</a>
+                            <a href="javascript-milan-tair2.html">Link 2 on</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                </ul>
+        </div>
+    </header>
+    <!-- Head -->
+    <section class="headSection1 bgPrimary py3">
+        <div class="container flex">
+            <div class="headText">
+                <h1 class="md">JavaScript-MilanTair</h1>
+                <p class="lead">Learn how to work JS</p>
+            </div>
+            <div class="headImgJS">
+                <img src="/images/unnamed.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Main -->
+    <section class="mainSection2 my4">
+        <div class="container">
+            <div>
+                <h2 class="my2 h3JS">Video Predavanja</h2>
+            </div>                      
+        </div>
+    </section>
+<section class="container flex">   
+<!-- #34 -->
+    <section class="video34">
+        <h3 class="my6 textCenter">Video 34</h3>
+        <p class="msg">...</p>
+        <p class="result">...</p>
+        <script>
+            function init() {
+                let msg = document.querySelector('.msg');
+
+                msg.innerHTML = '<b>A</b> <u>test</u>';
+
+                let result = document.querySelector('.result')
+
+                let a = 10;
+                let b = 3;
+                let c = a + b;
+
+                result.innerHTML = c;
+            }
+
+            window.addEventListener('load', init); 
+        </script>
+
+    </section>
+<!-- #35 -->
+    <section class="video35">
+        <h3 class="my6 textCenter">Video 35</h3>
+        <input type="number" class="input_a" value="0"><br>
+        <input type="number" class="input_b" value="0"><br>
+        <p class="result2">0</p>
+        <script>
+            function izracunaj() {
+                let a = document.querySelector('.input_a');
+                let b = document.querySelector('.input_b');
+
+                let vrA = Number(a.value);
+                let vrB = Number(b.value);
+
+                let rezultat = vrA + vrB;
+
+                document.querySelector('.result2').innerHTML = rezultat;
+            }
+            function init2() {
+                let a = document.querySelector('.input_a');
+                let b = document.querySelector('.input_b');
+
+                a.addEventListener('change', izracunaj);
+                b.addEventListener('change', izracunaj);
+            }
+
+            window.addEventListener('load', init2); 
+        </script>
+
+    </section>
+<!-- #36 -->
+    <section class="video36">
+        <h3 class="my6 textCenter">Video 36</h3>
+        <input type="number" class="input_aa" value="0"><br>
+        <input type="number" class="input_bb" value="0"><br>
+        <p class="result3">0</p>
+        <p class="result4">0</p>
+        <script>
+            function izracunaj2() {
+                let a = document.querySelector('.input_aa');
+                let b = document.querySelector('.input_bb');
+
+                let vrA = Number(a.value);
+                let vrB = Number(b.value);
+
+                let rezultat2 = vrA + vrB;
+
+                document.querySelector('.result3').innerText = rezultat2;
+
+                let res = document.querySelector('.result4');
+                
+                // res.innerHTML = 'Rezultat je <b>' + rezultat2 + '</b>!'; 
+                res.innerHTML = `Rezultat je <b>${rezultat2}</b>!`;
+            }
+            function init3() {
+                let a = document.querySelector('.input_aa');
+                let b = document.querySelector('.input_bb');
+
+                a.addEventListener('change', izracunaj2);
+                b.addEventListener('change', izracunaj2);
+            }
+
+            window.addEventListener('load', init3); 
+        </script>
+
+    </section>
+    <!-- #36-2 -->
+    <section class="video36-2">
+        <h3 class="my6 textCenter">Video 36-2</h3>
+        
+        Unesi ime:<br><input type="text" class="ime"><br>
+        <button class="btn-dodaj-ime">Dodaj</button>
+
+        <div class="imena">
+           
+        </div>
+
+        <script>            
+            function dodajIme() {
+                let ime = document.querySelector('.ime').value;
+
+                let sablon = `<article class="osoba">
+                                <header>
+                                    <h2>${ime}</h2>
+                                </header>
+                                <p>Ovo su podaci o osobi ${ime}.</p>
+                            </article>`;
+
+                document.querySelector('.imena').innerHTML += sablon;
+            }
+
+            function init4() {
+               let btn = document.querySelector('.btn-dodaj-ime');
+
+               btn.addEventListener('click', dodajIme);
+            }
+
+            window.addEventListener('load', init4);
+        </script>
+    
+    </section>
+</section>
+    <!-- Footer -->
+    <footer class="footer bgDark py5">
+        <div class="container flex">
+                <div>
+                    <h1>Galon-JS</h1>
+                    <p>Copyright &copy; 2021</p>
+                </div>
+                <nav>
+                    <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="javascript-milan-tair.html">JavaScript-MilanTair</a></li>
+                    </ul>
+                </nav>
+                <div class="social">
+                    <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+        </div>
+    </footer>  
+<script src="/js/main.js"></script>
+<script src="/js/calculator.js"></script>
+</body>
+</html>

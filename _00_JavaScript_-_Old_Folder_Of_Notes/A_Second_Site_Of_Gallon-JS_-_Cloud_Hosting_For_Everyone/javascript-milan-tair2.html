@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Notebook Web Site - Cloud Hosting For Everyone</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex">
+            <h1>Galon</h1>
+            <div class="burger-nav">
+                <ul class="nav-list-wrapper">
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn">JavaScript-MilanTair
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="javascript-milan-tair.html">Link 1 on</a>
+                            <a href="javascript-milan-tair2.html">Link 2 on</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </div>
+                    <li><a href="js-form-validation.html">JS Form Validation</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- Head -->
+    <section class="headSection1 bgPrimary py3">
+        <div class="container flex">
+            <div class="headText">
+                <h1 class="md">JavaScript-MilanTair</h1>
+                <p class="lead">Learn how to work JS</p>
+            </div>
+            <div class="headImgJS">
+                <img src="/images/unnamed.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Main -->
+    <section class="mainSection2 my4">
+        <div class="container">
+            <div>
+                <h2 class="my2 h3JS">Video Predavanja</h2>
+            </div>                      
+        </div>
+    </section>
+<section class="container flex">   
+    <!-- #37 -->
+    <section class="video37">
+        <h3 class="my6 textCenter">Video 37</h3>
+        <div class="div1"></div>
+        <script>
+            function proba() {
+                // var ime = 'Dragan';
+                ime = 'Dragan';
+
+                console.log(ime);
+                document.querySelector('.div1').innerHTML = ime;
+            }
+
+            var ime = 'Drugo ime';
+
+            proba();
+
+            console.log(ime);
+            document.querySelector('.div1').innerHTML += ime;
+        </script>
+    </section>
+    <!-- #38 -->
+    <section class="video38">
+        <h3 class="my6 textCenter">Video 38</h3>
+        <div class="div1"></div>
+        <script>
+            let ime2 = 'Univerzitet Singidunum    ';
+
+            ime2 = ime2.toUpperCase();
+            ime2 = ime2.toLowerCase();
+            ime2 = ime2.replace('univerzitet', 'University');
+            ime2 = ime2.substr(10);
+            // ime2 = ime2.substr(0, 10);
+            // ime2 = ime2.substr(5, 10);
+            // ime2 = ime2.substring(5, 10);
+            ime2 = ime2.trim();
+
+            let slovo = ime2[5];
+
+            console.log(ime2);
+            console.log(slovo);
+
+            let drugoSlovo = 'u';
+            let indeksSlova = ime2.indexOf(drugoSlovo);
+
+            console.log(drugoSlovo);
+            console.log(indeksSlova);
+
+            let pass = '15935788';
+            let duzinaPass = pass.length;
+
+            console.log(duzinaPass);
+
+            if (duzinaPass < 8) {
+                console.log('Lozinka nije moguca!')
+            } else {
+                console.log('Lozinka je moguca!')
+            }
+        </script>
+    </section>
+    <!-- #39 -->
+    <section class="video39">
+        <h3 class="my6 textCenter">Video 39</h3>
+        <div class="poruka"></div>
+
+        Ime: <input type="text" id="ime"><br>
+        ???
+        <script>
+            let vrednost = 0;
+
+            if (vrednost === false) {
+                console.log('slucaj 1')
+            } else {
+                console.log('slucaj 2')
+            }
+
+            let broj = 1203;
+
+            if (broj >= 1000 && broj <= 3000 ) {
+                console.log('Broj je ispravan');
+            } else {
+                console.log('Broj nije ispravan');
+            }
+            // sledeci primer 
+            window.addEventListener('load', init5)
+
+            function init5() {
+                let e = document.querySelector('#ime');
+
+                e.addEventListener('keyup', proveriIme);
+            }
+            function proveriIme() {
+                let e = document.querySelector('#ime');
+                let ime = e.value;
+               
+                let poruka = '';
+
+                if(ime.length < 3 || ime.length > 20) {
+                    poruka = 'Ime nije ispravno!';
+                }
+                let pe = document.querySelector('.poruka');
+                pe.innerText = poruka;
+            }
+        </script>
+    </section>
+    <!-- #40 -->
+    <section class="video40">
+        <h3 class="my6 textCenter">Video 40</h3>
+        
+        <script>          
+            let n = 3;
+            
+            switch(n) {
+                case 1 :
+                    console.log('Upisujete OAS'); break;
+                case 2:
+                    console.log('Upisujete MAS'); break;
+                case 3:
+                    console.log('Upisujete DAS'); break;
+                case 4:
+                    console.log('Upisujete PDS'); break;
+                default:
+                    console.log('Nepoznat nivo!');
+            }
+
+            /*if(n === 1) {
+                console.log('Upisujete OAS');
+            } else if(n === 2) {
+                console.log('Upisujete MAS');
+            } else if(n === 3) {
+                console.log('Upisujete DAS');
+            } else if(n === 4){
+                console.log('Upisujete PDS');
+            } else {
+                console.log('Nepoznat nivo!');
+            }*/            
+        </script>
+    </section>
+</section>
+    <!-- Footer -->
+    <footer class="footer bgDark py5">
+        <div class="container flex">
+                <div>
+                    <h1>Galon-JS</h1>
+                    <p>Copyright &copy; 2021</p>
+                </div>
+                <nav>
+                    <div class="burger-nav">
+                        <ul class="nav-list-wrapper">
+                            <li><a href="index.html" class="current">Home</a></li>
+                            <li><a href="features.html">Features</a></li>
+                            <li><a href="docs.html">Docs</a></li>
+                            <li><a href="calculator.html">Calculator</a></li>
+                            <li><a href="javascript-milan-tair.html">JavaScript-MilanTair</a></li>
+                        </ul>
+                    </div>    
+                </nav>
+                <div class="social">
+                    <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                </div>
+        </div>
+    </footer>  
+<script src="/js/main.js"></script>
+<script src="/js/calculator.js"></script>
+</body>
+</html>

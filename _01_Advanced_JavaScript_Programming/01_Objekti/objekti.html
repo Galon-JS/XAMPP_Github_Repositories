@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+// 1 primer
+        const subaryLegacy = {
+            make: 'Subary',
+            model: 'Legacy',
+            weight: 1560,
+            color: 'blue',
+            startEngine: function() {
+                return 'Engine of ' + this.make + ' ' + this.model + ' ' + 'started.'
+            } 
+        }
+        console.log(subaryLegacy.make);
+        console.log(subaryLegacy.startEngine());
+// 2 primer 
+        const subaryLegacy_2 = new Object()
+        subaryLegacy_2.make = 'Subary'
+        subaryLegacy_2.model = 'Legacy'
+        subaryLegacy_2.weight = 1560
+        subaryLegacy_2.color = 'blue'
+// 3 primer
+        function Car(make, model, weight, color) {
+            this.make = make
+            this.model = model
+            this.weight = weight
+            this.color = color
+
+            this.startEngine = function() {
+                return 'Engine of ' + this.make + ' ' + this.model + ' ' + 'started.'
+            }
+        }
+        let car1 = new Car('Subary', 'Legacy', 1560, 'blue')
+        let car2 = new Car('Ford', 'Taurus', 1870, 'blue')
+        let car3 = new Car('Porsche', 'Panamer', 1960, 'blue')
+        console.log(car2.model);
+        console.log(car2.startEngine());
+// 4 primer
+
+        
+    </script>
+</body>
+</html>

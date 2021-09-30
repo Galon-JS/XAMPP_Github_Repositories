@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let json = '[{"username":"Ana","password":"gf54#%^dsds","dateTimeCreated":"1587290213832"},{"username":"Vanja","password":"dr54#%^dsds","dateTimeCreated":"1382290314831"}]'
+        
+        let data = JSON.parse(json)
+        console.log('data: ', data);
+
+        let dateTimeCreated = JSON.parse(json, (key, value, date) => {
+            console.log('key: ', key);
+            console.log('value: ', value);
+
+            if (key === 'dateTimeCreated') {
+                date = new Date(parseInt(value))
+                console.log('date: ', date);
+                value = date
+                console.log('value: ', value);
+            }
+
+            return value
+
+        })
+        console.log('dateTimeCreated: ', dateTimeCreated);
+        
+        
+        // let json = '{"countries":[{"countryCode":"sr","name":"Serbia","capital":"Belgrade","description":"Serbiais..."},{"countryCode":"fr","name":"France","capital":"Paris","description":"Franceis..."}]}'
+
+        // let data = JSON.parse(json)
+        // console.log('data: ', data);
+
+        // for (let i = 0; i < data.countries.length; i++) {
+
+        //     document.body.innerHTML += `<h3>${data.countries[i].name}</h3>
+        //                                 <p>Capital: ${data.countries[i].capital}</p>
+        //                                 <p>Description: ${data.countries[i].description}</p>`
+
+        // }
+
+        // let json = '{"name": "Ana", "age": 33}'
+        // let obj = JSON.parse(json) 
+        // console.log('obj: ', obj);
+        // console.log('obj: ', obj.name);
+        // console.log('obj: ', obj.age);
+
+        let json_2 = '[3, 4, 5, "Haloo World"]'
+        let arr = JSON.parse(json_2)
+        console.log('arr: ', arr);
+        console.log('arr: ', arr[3]);
+
+        // let json_3 = [33]
+        // let value = JSON.parse(json_3)
+        // console.log('value: ', value);
+
+        // let json_4 = 'true'
+        // let value_4 = JSON.parse(json_4)
+        // console.log('value_4: ', value_4);
+        // console.log('value_4: ', typeof(value_4));
+
+    </script>
+</body>
+
+</html>

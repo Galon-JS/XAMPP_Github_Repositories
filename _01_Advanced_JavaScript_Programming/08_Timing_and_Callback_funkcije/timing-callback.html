@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="head">setIntetval()</h1>
+    <button class="myButton">Click me</button>
+    <script>
+        let head = document.querySelector('.head');
+        function changeColor(elem) {
+            elem.style.color = elem.style.color === 'red' ? 'blue' : 'red'
+        }
+        let interval = setInterval(changeColor, 500, head)
+        function clearInt(int) {
+            clearInterval(int)
+        }
+        setTimeout(clearInt, 4500, interval)
+        // clearInterval(interval)
+
+        console.log('Statment 1');
+
+        document.querySelector('.myButton').addEventListener('click', function () {
+            // alert('Haloo from modal window');
+            console.log('Haloo from statment after alert() method.');
+        });
+        // console.log('Hallo from some code after addEventListener() method.');
+
+        // setTimeout(function () {
+        //     console.log('Haloo World Statement 2 sec');
+        // }, 2000)
+        // console.log('State 3');
+        // let timeout1 = setTimeout(function () {
+        //         console.log('Haloo World Statement 2 sec');
+        //     }, 2000)
+        //     console.log('timeout1: ', timeout1);
+        //     clearTimeout(timeout1)
+        //     console.log('timeout11: ', timeout1);
+        //     console.log('State 3');
+    </script>
+</body>
+</html>

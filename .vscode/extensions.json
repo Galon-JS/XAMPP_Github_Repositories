@@ -1,0 +1,55 @@
+<<<<<<< HEAD
+version https://git-lfs.github.com/spec/v1
+oid sha256:14607903bbff94b9f9ba36ce878cd00535f323792237d4a9700e8f17d0c21b8d
+size 2961
+=======
+{
+  "recommendations": [
+    "2gua.rainbow-brackets",
+    "aaron-bond.better-comments",
+    "abusaidm.html-snippets",
+    "akamud.vscode-javascript-snippet-pack",
+    "alefragnani.project-manager",
+    "alex-pattison.theme-cobalt3",
+    "coenraads.bracket-pair-colorizer-2",
+    "dsznajder.es7-react-js-snippets",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "eseom.nunjucks-template",
+    "felipecaputo.git-project-manager",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-complete-tag",
+    "formulahendry.auto-rename-tag",
+    "formulahendry.terminal",
+    "github.remotehub",
+    "github.vscode-pull-request-github",
+    "ionutvmi.path-autocomplete",
+    "jasonnutter.search-node-modules",
+    "knisterpeter.vscode-github",
+    "leizongmin.node-module-intellisense",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-ssh",
+    "ms-vscode-remote.remote-ssh-edit",
+    "ms-vscode-remote.remote-wsl",
+    "ms-vscode-remote.remote-wsl-recommender",
+    "ms-vscode-remote.vscode-remote-extensionpack",
+    "ms-vscode.powershell",
+    "ms-vscode.references-view",
+    "pkief.material-icon-theme",
+    "primafuture.open-php-html-js-in-browser",
+    "qezhu.gitlink",
+    "rafaelmaiolla.remote-vscode",
+    "shan.code-settings-sync",
+    "svipas.prettier-plus",
+    "tabnine.tabnine-vscode",
+    "wallabyjs.quokka-vscode",
+    "wayou.vscode-todo-highlight",
+    "whtouche.vscode-js-console-utils",
+    "wwm.better-align",
+    "xabikos.javascriptsnippets",
+    "yandeu.five-server",
+    "visualstudioexptteam.vscodeintellicode",
+    "christian-kohler.path-intellisense"
+  ]
+}
+>>>>>>> 9e191abfc6441493d3871f3ae6a3f05aa6b210cc

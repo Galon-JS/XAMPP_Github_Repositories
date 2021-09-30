@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <!-- <img v-binf:src="thumb_url" alt="user profile picture" srcset=""> -->
+        <!-- <div v-once>{{ name }}</div> -->
+        <!-- <div v-html="email"></div> -->
+        <!-- <div v-text="balance"></div> -->
+
+        <input v-model="name" placeholder="enter you name...">
+        <label for="favorite-color">Choose your favorite color: </label>
+        <select v-model="color" id="favorite-color">
+            <option>Maroon</option>
+            <option>Blue</option>
+            <option>Yellow</option>
+            <option>Magenta</option>
+        </select>
+        <div>
+            Your name: {{ name }}
+        </div>
+        <div>
+            Your favorite color: {{ color }}
+        </div>
+    </div>
+
+    <script src="./vue.js"></script>
+
+    <script>
+        let user = {
+            name: 'Ana Todoric',
+            email: '<i>todoric@gmail.com</i>',
+            balance: 55562.56845,
+            thumb_url: '/img/sdg24bv2.png',
+            color: 'Blue'
+        }
+
+        let vm = new Vue( {
+            el: '#container',
+            data: user
+        } )
+    </script>
+</body>
+
+</html>

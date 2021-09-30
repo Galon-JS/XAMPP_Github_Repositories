@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+:root  {--primary-color: #047aed;
+        --secondary-color: #1c3fa8;
+        --dark-color: #002240;
+        --light-color: #f4f4f4;
+        --success-color: #5cb85c;
+        --error-color: #d9534f;}
+*      {box-sizing: border-box;
+        padding: 0;
+        margin: 0;}
+body   {font-family: 'Lato', sans-serif;
+        color: #333;
+        line-height: 1.6;}
+ul {list-style-type: none;
+    font-size: 1em;}
+a {text-decoration: none;
+  color: #333;}
+h1, h2 {font-weight: 300;
+        line-height: 1.2;
+        margin: 10px 0;}
+p {margin: 10px 0;}
+img {width: 100%;}
+code, pre {background: #333;
+           color: #fff;
+           padding: 10px;}
+.hidden {visibility: hidden;
+         height: 0;}
+/* Header */
+.header {background-color: var(--primary-color);
+         color: #fff;
+         height: 70px;}
+.header, .container, .flex {justify-content: space-between;}
+.header h1 {font-size: 36px;}
+.header ul {display: flex;}
+.header a {color: #fff;
+           padding: 10px;
+           text-decoration: none;
+           margin: 0 5px;}
+.header a:hover {border-bottom: 2px solid #fff;
+                 text-decoration: none;
+                 border: none;
+                 color: yellow;
+                 background-color: var(--secondary-color);}
+/* Showcase */
+.showcaseSection1 {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+    }
+.showcaseSection1>div {
+  flex-wrap: wrap;
+}
+.showcaseSection1 h1 {font-size: 40px;}
+.showcaseSection1 p {margin: 20px 0;}
+.container {overflow: visible;}
+.showcaseText {animation: slideInFromLeft 1s ease-in;
+               flex: 58%;}
+.showcaseForm {position: relative;
+               flex: 38%;
+               top: 60px;
+               height: 350px;
+               width: 400px;
+               padding: 40px;
+               z-index: 100;
+               animation: slideInFromRight 1s ease-in;}
+.showcaseForm .formControl {margin: 30px 0;}
+.showcaseForm input[type='text'],
+.showcaseForm input[type='email'] {border: 0;
+                     border-bottom: 1px solid #b4becb;
+                     width: 100%;
+                     padding: 3px;
+                     font-size: 16px;}
+.showcaseForm input:focus {outline: none;}
+.showcaseSection1::before,
+.showcaseSection1::after {content: '';
+                          position: absolute;
+                          height: 100px;
+                          bottom: -70px;
+                          right: 0;
+                          left: 0;
+                          background: #fff;
+                          transform: skewY(-3deg);
+                          -webkit-transform: skewY(-3deg);
+                          -moz-transform: skewY(-3deg);
+                          -ms-transform: skewY(-3deg);}
+/* Stats */
+.statsSection2 {
+    padding-top: 100px;    
+}
+.statsSection2>div>div {
+  justify-content: space-around;
+}
+/* CLI */
+.cliSection3>div {
+    flex-wrap: wrap;
+} 
+.cliImg {
+    flex: 65%;
+} 
+.flexColumn {
+    flex: 35%;
+}
+/* Cloud */
+.cloudSection4 {
+    background-color: var(--primary-color);    
+    padding: 20px; 
+    color: #fff;  
+}
+.cloudSection4>div {
+    flex-wrap: wrap;
+}
+.cloudText {
+    flex: 55%;
+}
+.cloudImg {
+    flex: 45%;
+}
+/* Languages */
+.languageSection5 .flex {
+    flex-wrap: wrap;
+}
+.languageSection5 .card {
+    text-align: center;
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+.languageSection5>div>div>h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.languageSection5 .card:hover {
+    transform: translateY(-15px);
+}
+/* Footer */
+.footer .social a {
+    margin: 0 10px;
+}
+
+/* Features */
+.headSection1 .flex {
+  flex-wrap: wrap;
+}
+.headText {
+  flex: 80%;
+}
+.headImg {
+  flex: 20%;
+}
+.subheadSection2 .flex {
+  flex-wrap: wrap;
+  gap:  200px;
+}
+.subheadText {
+  flex: 50%;
+}
+.subheadImg {
+  flex: 30%;
+}
+.mainSection3 .card {
+  margin: 10px;
+}
+.mainSection3 .card>i {
+  margin-right: 20px;
+}
+.row2 .flex .card {
+  flex-wrap: wrap;  
+}
+.row21 {
+  flex: 68%;
+  min-height: 15vh;
+}
+.row22 {
+  flex: 33%;
+  min-height: 15vh;
+}
+.row31 {
+  flex: 33%;
+}
+.row32 {
+  flex: 33%;
+}
+.row33 {
+  flex: 33%;
+}
+/* Calculator Page */
+.headImgC {
+  width: 10%;
+}
+.calculatorSection {
+  border: 1px solid #002240;
+  background-color:goldenrod;
+  width: 380px;
+  height: 480px;
+  flex-wrap: wrap; 
+  margin: 10px auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+}
+.calcScreen {
+  border-radius: 5px;
+  background-color:navy;
+  width: 98%;
+  color: #fff;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 10px;
+  flex: 28%;
+  padding: 10px;
+}
+.calcBtns {
+  width: 100%;
+  height: 100%;
+  flex: 68%;
+}
+.calcBtn {
+  width: 100%;
+  height: 100%;
+  margin: 0 5px;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.btnPlus {
+  height: 220%;
+}
+.b1 {
+  align-items: flex-start;
+  position: relative;
+}
+.rowB .b1 button {
+  height: 100%;
+}
+.rowB {
+  width: 100%;
+  height: 100%;
+  margin: 5px 0;
+}
+.preview-Screen {
+  font-size: 1.2vw;
+  font-weight: bold;
+}
+.operation-Screen {
+  font-size: 1.7vw;
+  font-weight: bold;
+  padding-right: 50px;
+}
+.current-Screen {
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+/* Dropdown */
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  color: white;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-decoration: none;
+
+}
+
+.dropdown-content a:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  text-decoration: none;
+
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.current {
+  color: #d9534f;
+}
+
+/* JavaScript MilanTair Page */
+
+.headImgJS {
+  width: 20%;
+}
+.h3JS {
+  border: red solid 2px;
+  border-radius: 5px;
+  padding: 3px 7px;
+  display: inline-flex;
+}
+/* JS Form */
+.radios, .checkbox {
+  padding: 3px 10px;
+}
+.msg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-left: 400px;
+}
+.error {
+  border: 2px solid red;
+}

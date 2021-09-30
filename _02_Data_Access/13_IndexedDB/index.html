@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let db
+        let request = window.indexedDB.open('MyDatabase', 1)
+
+        request.onupgradeneeded = function (event) {
+            db = event.target.result
+            let objectStore = db.createObjectStore('students', {keyPath: 'usi'})
+        }
+        request.onsuccess = function (event) {
+            db = event.target.result
+
+            let transaction = db.transaction('students', 'readwrite')
+
+            let studentsObjectStore = transaction.objectStore('students')
+
+            let student = {
+                usi: 'v43v2f',
+                name: 'Ana',
+                email: 'ana@gmail.com',
+                age: 33
+            }
+
+            let request = studentsObjectStore.add(student)
+        }
+        request.onerror = function (event) {
+            console.error('Error: ' + event.target.error)
+        }
+    </script>
+</body>
+</html>

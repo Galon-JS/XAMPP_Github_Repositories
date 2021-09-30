@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="calc">
+        <div class="calc-screen">
+            <div class="preview-screen"></div>
+            <div class="operation-screen"></div>
+            <div class="current-screen"></div>
+        </div>
+        <div class="calc-keyboard">
+            <div class="row">
+            <button onclick="handleButtonClick(1)" class="calc-keyboard-btn">1</button>
+            <button onclick="handleButtonClick(2)" class="calc-keyboard-btn">2</button>
+            <button onclick="handleButtonClick(3)" class="calc-keyboard-btn">3</button>
+            <button onclick="handleButtonClick('+')" class="calc-keyboard-btn plus">+</button>
+            
+        </div>
+        <div class="row2">
+        <button onclick="handleButtonClick(4)" class="calc-keyboard-btn">4</button>
+        <button onclick="handleButtonClick(5)" class="calc-keyboard-btn">5</button>
+        <button onclick="handleButtonClick(6)" class="calc-keyboard-btn">6</button>
+        </div>
+        <div class="row2">
+            <button onclick="handleButtonClick(7)" class="calc-keyboard-btn">7</button>
+            <button onclick="handleButtonClick(8)" class="calc-keyboard-btn">8</button>
+            <button onclick="handleButtonClick(9)" class="calc-keyboard-btn">9</button>
+            <button onclick="handleButtonClick('-')" class="calc-keyboard-btn">-</button>
+            <button onclick="handleButtonClick(0)" class="calc-keyboard-btn">0</button>
+            <button onclick="handleButtonClick('.')" class="calc-keyboard-btn">.</button>
+            <button onclick="handleButtonClick('*')" class="calc-keyboard-btn">*</button>
+            
+            <button onclick="handleButtonClick('/')" class="calc-keyboard-btn">/</button>
+        </div>
+            <div class="row2">
+            <button onclick="handleButtonClick('=')" class="calc-keyboard-btn jc">=</button>
+            <button onclick="handleButtonClick('C')" class="calc-keyboard-btn jc">C</button>
+        </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<!-- 
+
+-->

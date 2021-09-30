@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div>
+        <input id="message" autocomplete="off">
+    </div>
+    <div>
+        <button id="connect">Connect</button>
+        <button id="disconnect">Disconnect</button>
+        <button id="send">Send</button>
+    </div>
+    <div>
+        <textarea name="status" id="status" cols="30" rows="10" readonly></textarea>
+    </div>
+    <script>
+        console.log('Halooo World');
+
+        let send = document.querySelector('#send');
+        let connect = document.querySelector('#connect');
+        let disconnect = document.querySelector('#disconnect');
+
+        let message = document.querySelector('#message');
+        let status = document.querySelector('#status');
+        let webSocket
+
+        connect.addEventListener('click', function (e) {
+            // wss://127.0.0.1:52950/02_Data_Access/10_Long_polling-WebSocket/websocket-echo-demo.html
+            // http://localhost/XAMPP_folder/02_Data_Access/10_Long_polling-WebSocket/websocket-echo-demo.html
+            webSocket = new WebSocket('ws://localhost:8081/02_Data_Access/10_Long_polling-WebSocket/websocket-echo-demo.html/ws')
+            webSocket.onopen = function (e) {
+                status.value += 'Connection established !\n'
+            }
+            webSocket.onmessage = function (event) {
+                status.value += 'Message received: ' + event.data + '\n'
+            }
+            webSocket.onclose = function (event) {
+                status.value += 'Connection closed: ' + event.code + ' ' + event.reason + '\n'
+            }
+            webSocket.onerror = function (error) {
+                status.value += 'Error: ' + error.message + '\n'
+            }
+        });
+        disconnect.addEventListener('click', function () {
+            if (webSocket !== undefined) {
+                webSocket.close(1000, 'Work complete')
+            }
+        })
+        send.addEventListener('click', function () {
+            if (message.value === '') {
+                return
+            }
+            if (webSocket === undefined || webSocket.readyState !== WebSocket.OPEN) {
+                status.value += 'Please open the connection first.\n'
+                return
+            }
+            webSocket.send(message.value)
+            status.value += 'Message sent: ' + message.value + '\n'
+            message.value = ''
+        })
+        // const ws = new WebSocket('')
+
+        // ws.addEventListener('open', () => {
+        //     console.log('We are connected !!!');            
+        // })
+        // ws.addEventListener('close', () => {
+        //         console.log('We are disconnected !!!');
+        //     })
+    </script>
+</body>
+
+</html>

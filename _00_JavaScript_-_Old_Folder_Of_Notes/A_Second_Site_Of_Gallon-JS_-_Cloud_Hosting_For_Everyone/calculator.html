@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/utilities.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="/js/main.js"></script>
+    <script src="/js/calculator.js"></script>
+    <title>Notebook Web Site - Cloud Hosting For Everyone</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container flex">
+            <h1>Galon</h1>
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="javascript-milan-tair.html">JavaScript-MilanTair</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Head -->
+    <section class="headSection1 bgPrimary py1">
+        <div class="container flex">
+            <div class="headText">
+                <h1 class="lg">Calculator</h1>
+                <p class="sm">Learn how to work with the Galon platform</p>
+            </div>
+            <div class="headImgC">
+                <img src="/images/docs.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Main Calculator -->
+    <section class="calculatorSection flexColumn">
+        <div class="calcScreen flexColumn">
+            <div class="preview-Screen flex"></div>
+            <div class="operation-Screen flex"></div>
+            <div class="current-Screen flex"></div>
+        </div>
+        <div class="calcBtns flexColumn">
+            <div class="rowB b1 flex">
+                <!-- <input type="button" value="1" class="calcBtn btnNum1">
+                <input type="button" value="2" class="calcBtn btnNum2">
+                <input type="button" value="3" class="calcBtn btnNum3">
+                <input type="button" value="+" class="calcBtn btnOprP btnPlus"> -->
+                <button onclick="clickedButton('1');" class="calcBtn btnNum">1</button>
+                <button onclick="clickedButton('2');" class="calcBtn btnNum">2</button>
+                <button onclick="clickedButton('3');" class="calcBtn btnNum">3</button>
+                <button onclick="clickedButton('+');" class="calcBtn btnOpr btnPlus">+</button>
+            </div>
+            <div class="rowB b2 flex">
+                <!-- <input type="button" value="4" class="calcBtn btnNum4">
+                <input type="button" value="5" class="calcBtn btnNum5">
+                <input type="button" value="6" class="calcBtn btnNum6"> -->
+                <button onclick="clickedButton('4');" class="calcBtn btnNum">4</button>
+                <button onclick="clickedButton('5');" class="calcBtn btnNum">5</button>
+                <button onclick="clickedButton('6');" class="calcBtn btnNum">6</button>
+                <button class="calcBtn" disabled></button>
+            </div>
+            <div class="rowB b3 flex">
+                <!-- <input type="button" value="7" class="calcBtn btnNum7">
+                <input type="button" value="8" class="calcBtn btnNum8">
+                <input type="button" value="9" class="calcBtn btnNum9">
+                <input type="button" value="-" class="calcBtn btnOprM"> -->
+                <button onclick="clickedButton('7');" class="calcBtn btnNum">7</button>
+                <button onclick="clickedButton('8');" class="calcBtn btnNum">8</button>
+                <button onclick="clickedButton('9');" class="calcBtn btnNum">9</button>
+                <button onclick="clickedButton('-');" class="calcBtn btnOpr">-</button>
+            </div>
+            <div class="rowB b4 flex">
+                <!-- <input type="button" value="." class="calcBtn btnNumD">
+                <input type="button" value="0" class="calcBtn btnNum0">
+                <input type="button" value="*" class="calcBtn btnOprMn">
+                <input type="button" value="/" class="calcBtn btnOprDe"> -->
+                <button onclick="clickedButton('.');" class="calcBtn btnNum">.</button>
+                <button onclick="clickedButton('0');" class="calcBtn btnNum">0</button>
+                <button onclick="clickedButton('*');" class="calcBtn btnOpr">*</button>
+                <button onclick="clickedButton('/');" class="calcBtn btnOpr">/</button>
+            </div>
+            <div class="rowB b5 flex">
+                <!-- <input type="reset" class="calcBtn btnRes">
+                <input type="button" class="calcBtn btnEqu"> -->
+                <button onclick="clickedButton('C');" class="calcBtn btnRes">C</button>
+                <button onclick="clickedButton('=');" class="calcBtn btnEqu">=</button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer bgDark py5">
+        <div class="container flex">
+            <div>
+                <h1>Galon-JS</h1>
+                <p>Copyright &copy; 2021</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="javascript-milan-tair.html">JavaScript-MilanTair</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="/A Notebook Web Site - Cloud Hosting For Everyone/js/main.js"></script>
+    <script src="/A Notebook Web Site - Cloud Hosting For Everyone/js/calculator.js"></script>
+
+</body>
+
+</html>

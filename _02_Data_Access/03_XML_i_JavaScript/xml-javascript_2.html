@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="xml"></div>
+    <script>
+        // create XMLDocument object with root element
+        let xmlDocument = document.implementation.createDocument(null, 'root')
+        
+        // create recipe
+        let recipeElement = xmlDocument.createElement('recipe')
+
+        // create title element
+        let titleElement = xmlDocument.createElement('title')
+        let titleElementText = xmlDocument.createTextNode('Grilled Cheese Sandwich')
+        titleElement.appendChild(titleElementText)
+
+        // add title to recipe
+        recipeElement.appendChild(titleElement)
+
+        // create ingredients
+        let ingredientsElement = xmlDocument.createElement('ingredients')
+
+        // create first ingredient element
+        let ingredient_1Element = xmlDocument.createElement('ingredient')
+        let ingredient_1ElementText = xmlDocument.createTextNode('bread slice')
+        ingredient_1Element.appendChild(ingredient_1ElementText)
+        ingredient_1Element.setAttribute('qty', '2')
+        // create second ingredient element
+        let ingredient_2Element = xmlDocument.createElement('ingredient')
+        let ingredient_2ElementText = xmlDocument.createTextNode('cheese slice')
+        ingredient_2Element.appendChild(ingredient_2ElementText)
+        // create third ingredient element
+        let ingredient_3Element = xmlDocument.createElement('ingredient')
+        let ingredient_3ElementText = xmlDocument.createTextNode('margarine pat')
+        ingredient_3Element.appendChild(ingredient_3ElementText)
+        ingredient_3Element.setAttribute('qty', '2')
+
+        // add ingredient(s) to ingredients
+        ingredientsElement.appendChild(ingredient_1Element)
+        ingredientsElement.appendChild(ingredient_2Element)
+        ingredientsElement.appendChild(ingredient_3Element)
+        // add ingredients to recipe
+        recipeElement.appendChild(ingredientsElement)
+        // add recipe to root
+        xmlDocument.documentElement.appendChild(recipeElement)
+
+        // create XMLSerializer to convert XML DOM to string
+        let xmlSerializer = new XMLSerializer()
+        let xmlString = xmlSerializer.serializeToString(xmlDocument)
+
+        // show XML in div element on HTML page
+        let xmlContainer = document.querySelector('.xml')
+        xmlContainer.appendChild(document.createTextNode(xmlString))
+
+        // let xmlDocument = document.implementation.createDocument(null, 'root')
+
+        // let ingredientElement = xmlDocument.createElement('ingredient')
+        // let ingredientElementText = xmlDocument.createTextNode('bread slice')
+        // ingredientElement.appendChild(ingredientElementText)
+        // xmlDocument.documentElement.appendChild(ingredientElement)
+
+        // let xmlSerializer = new XMLSerializer()
+        // let xmlString = xmlSerializer.serializeToString(xmlDocument)
+        // console.log('xmlString: ', xmlString);
+
+    </script>
+</body>
+</html>

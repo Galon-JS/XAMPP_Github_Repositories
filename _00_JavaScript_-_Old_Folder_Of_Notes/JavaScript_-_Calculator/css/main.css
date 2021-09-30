@@ -1,0 +1,25 @@
+.btn {
+    font-size: 25px;
+    width: 6vw;
+    height: 10vh;
+}
+.btn-clear,
+.btn-equals {
+    width: 12vw;
+    height: 10vh;
+}
+.screen {
+    width: 27vw;
+    height: 22vh;
+    color:chartreuse;
+}
+.current-screen {
+    font-size: 5.5vh;
+}
+.operation-screen {
+    font-size: 5vh;
+    font-weight: bolder;
+}
+.preview-screen {
+    font-size: 4.5vh;
+}

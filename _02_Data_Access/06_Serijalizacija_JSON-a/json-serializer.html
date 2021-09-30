@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let person = {}
+        person.id = 33
+        person.firstName = 'Ana'
+        person.lastName = 'Djokic'
+        person.fullName = 'Ana Djokic'
+        person.address = {}
+        person.address.street = 'Dositejeva 33'
+        person.address.zipCode = 26000
+        person.address.city = 'Amsterdam'
+        person.adult = true
+        person.showInfo = function () {
+            return person.address
+        }
+        console.log('person: ', person);
+        console.log('person: ', person.showInfo());
+
+        person.toJSON = function (name) {
+            return {
+                first_name: this.firstName,
+                last_name: this.lastName,
+                address: this.address
+            }
+        }
+
+        function replacer(key, value) {
+            if (key === 'id') {
+                return undefined
+            } else if (key === 'adult') {
+                return (value === true) ? 'Yes' : 'No'
+            }
+            return value
+        }
+        let jsonn = JSON.stringify(person, replacer)
+        console.log('jsonn: ', jsonn);
+
+        let replacerLet = ['fullName', 'address', 'street', 'city', 'adult']
+        let jsonnn = JSON.stringify(person, replacerLet)
+        console.log('jsonnn: ', jsonnn);
+
+        let json = JSON.stringify(person)
+        console.log('json: ', json);
+
+        let json_2 = JSON.stringify([3, 5, 11])
+        console.log('json_2: ', json_2);
+
+        let json_3 = JSON.stringify(56.67)
+        console.log('json_3: ', json_3);
+
+        let json_4 = JSON.stringify(false)
+        console.log('json_4: ', json_4);
+
+        let json_5 = JSON.stringify(new Date())
+        console.log('json_5: ', json_5);
+
+        let json_6 = JSON.stringify(NaN)
+        console.log('json_6: ', json_6);
+
+        let json_7 = JSON.stringify(Infinity)
+        console.log('json_7: ', json_7);
+
+        // let json_8 = JSON.stringify(120n)
+        // console.log('json_8: ', json_8);
+
+        let json_9 = JSON.stringify(new Set(['a', 'b']))
+        console.log('json_9: ', json_9);
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        
+        <button v-on:click="code = Math.random()">Generate code</button>
+        <p>{{ code }}</p>
+        <button v-on:click="sayHeloo('Ana', $event)">Say Heloo</button>
+
+    </div>
+
+    <script src="./vue.js"></script>
+
+    <script>
+        let vm = new Vue( {
+            el: '#container',
+            data: {
+                code: 0
+            },
+            methods: {
+                sayHeloo: function (name, e) {
+                    alert('Hello world!' + name)
+                }
+            }
+        } )
+    </script>
+</body>
+
+</html>

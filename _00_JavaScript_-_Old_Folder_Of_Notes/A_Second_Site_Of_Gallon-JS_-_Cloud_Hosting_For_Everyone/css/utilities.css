@@ -1,0 +1,110 @@
+/* Utilities */
+.container   {max-width: 1100px;
+              margin: 0 auto;
+              overflow: auto;
+              padding: 0 40px;}
+.flex {display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 100%;}
+.flexColumn {display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       height: 100%;}
+.card        {background-color: #fff;
+              color: rgb(0, 0, 0);
+              border-radius: 10px;
+              box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.2);
+              padding: 20px;
+              margin: 20px;}
+.btn         {display: inline-block;
+              padding: 10px 30px;
+              cursor: pointer;
+              background: #047aed;
+              color: #fff;
+              border: none;
+              border-radius: 5px;}
+.btnOutline {background-color: transparent;
+              border: 1px #fff solid;}
+.btn:hover   {transform: scale(0.98);}
+/* Backgrounds & colored buttons */
+.bgPrimary,
+.btnPrimary   {background-color: var(--primary-color);
+               color: #fff;}
+.bgSecondary,
+.btnSecondary {background-color: var(--secondary-color);
+               color: #fff;}
+.bgDark,
+.btnDark      {background-color: var(--dark-color);
+               color: #fff;}
+.bgLight,
+.btnLight     {background-color: var(--light-color);
+               color: #333;}
+.bgPrimary a,
+.btnPrimary a,
+.bgSecondary a,
+.btnSecondary a,
+.bgDark a,
+.btnDark a    {color: #fff;}
+/* Text colors */
+.textPrimary {color: var(--primary-color);}
+.textSecondary {color: var(--secondary-color);}
+.textDark {color: var(--dark-color);}
+.textLight {color: var(--light-color);}
+/* Text sizes */
+.lead {font-size: 20px;}
+.sm {font-size: 1rem;}
+.md {font-size: 2rem;}
+.lg {font-size: 3rem;}
+.xl {font-size: 4vmax;}
+.textCenter {text-align: center;}
+/* Alert */
+.alert {background-color: var(--light-color);
+        padding: 10px 20px;
+        font-weight: bold;
+        margin: 15px 0;}
+.alert i {margin-right: 10px;}
+.alert-success {background-color: var(--success-color);
+                color: #fff;}
+.alert-error {background-color: var(--error-color);
+              color: #fff;}
+/* Margin */
+.my1 {margin: 1rem 0;}
+.my2 {margin: 1.5rem 0;}
+.my3 {margin: 2rem 0;}
+.my4 {margin: 3rem 0;}
+.my5 {margin: 4rem 0;}
+.m1 {margin: 1rem;}
+.m2 {margin: 1.5rem;}
+.m3 {margin: 2rem;}
+.m4 {margin: 3rem;}
+.m5 {margin: 4rem;}
+/* Padding */
+.py1 {padding: 0.1rem 0;}
+.py2 {padding: 1.5rem 0;}
+.py3 {padding: 2rem 0;}
+.py4 {padding: 3rem 0;}
+.py5 {padding: 4rem 0;}
+.p1 {padding: 1rem;}
+.p2 {padding: 1.5rem;}
+.p3 {padding: 2rem;}
+.p4 {padding: 3rem;}
+.p5 {padding: 4rem;}
+/* Sticky Header */
+.sticky {
+       position: fixed;
+       top: 0;
+       width: 100%;
+}
+.headerF {
+       position: sticky;
+       top: 0;
+       width: 100%;
+}
+/* .footer {
+       position: fixed;
+       bottom: 0;
+       width: 100%;
+} */
+
