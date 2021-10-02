@@ -16,7 +16,6 @@
     "liveServer.settings.root": "/",
     "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.ChromeDebuggingAttachment": true,
-    "liveServer.settings.wait": 50,
     "liveServer.settings.useWebExt": true,
     "tabnine.receiveBetaChannelUpdates": true,
     "vsintellicode.modify.editor.suggestSelection": "enabled",
