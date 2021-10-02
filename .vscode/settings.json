@@ -32,4 +32,6 @@
     "workbench.settings.useSplitJSON": true,
     "editor.suggestSelection": "recentlyUsed",
     "php.validate.executablePath": null,
+    "phpserver.phpConfigPath": "php.ini",
+    "phpserver.phpPath": "$PATH",
 }
